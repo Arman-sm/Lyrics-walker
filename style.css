@@ -1,0 +1,66 @@
+body {
+	background-color: black;
+	width: 100dvw;
+	height: 100dvh;
+	margin: 0;
+	gap: 1rem;
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+button {
+	background-color: hsl(0, 0%, 15%);
+	color: white;
+	cursor: pointer;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: bold;
+	padding: 1rem 2.5rem;
+	border-radius: 200rem;
+}
+#lyricsFile {
+	display: none;
+}
+#lyricsGUI {
+	flex-direction: column;
+	width: 60%;
+	height: 25%;
+	gap: .25rem;
+	background: radial-gradient(circle farthest-corner at top left, hsl(110, 59%, 45%) 0%, hsl(131, 100%, 22%)80%);
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	border-radius: 2.5rem;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	scrollbar-width: none;
+}
+#lyricsGUI::-webkit-scrollbar {
+	display: none;
+}
+#lyricsGUI span:first-of-type {
+	margin-top: 10vh;
+}
+#lyricsGUI span:last-of-type {
+	margin-bottom: 10vh;
+}
+#lyricsGUI div {
+	pointer-events: none;
+	position: absolute;
+	width: 60%;
+	height: 25%;
+	border-radius: 2.5rem;
+	background: linear-gradient(0deg,rgba(20, 20, 20, 0.3) 0%, rgba(0,0,0,0) 40%, transparent 60%, rgba(20, 20, 20, 0.3) 100%);
+}
+#lyricsGUI span {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: bold;
+	transition: color .1s, all .5s;
+	white-space: nowrap;
+	font-size: 15pt;
+	color: hsla(0, 0%, 100%, 0.5);
+}
+.lyrics-focused {
+	color: white !important;
+	font-size: 20pt !important;
+}
